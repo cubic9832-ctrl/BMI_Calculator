@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100..900&display=swap" rel="stylesheet">
+  <title>BMI 계산기</title>
+
+  <!-- CSS 파일 연결 -->
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header>
+    <h1>나의 체질량 지수(BMI) 계산해 보기</h1>
+    <p>체질량 지수는 키와 체중을 통해 비만율을 확인하는 수치로 <br>비만이 의심되는 경우 객관적 수치로 확인할 수 있는 기준입니다.</p>
+  </header>
+
+  <main>
+    <section class="calculator-section">
+      <h2>나의 BMI 계산하기</h2>
+
+      <form id="bmi-form">
+        <div class="input-group">
+          <label for="height">키(cm)</label>
+          <input type="number" id="height" placeholder="키 입력"/>
+          <label for="weight">몸무게(kg)</label>
+          <input type="number" id="weight" placeholder="체중 입력"/>
+        </div>
+
+        <button type="button" id = "btn-cal">BMI 계산하기</button>
+        <button type="button" id = "btn-res">초기화</button>
+      </form>
+
+      <div class="result">
+        <h3>계산 결과</h3>
+        <p id="bmi-result">아직 계산하지 않았습니다.</p>
+        <p id="bmi-message"></p>
+      </div>
+    </section>
+
+    <section class="info-section">
+      <h2>BMI 기준표</h2>
+
+      <img src = "./img/BMI.jpg" alt = "BMI 기준표">
+    </section>
+  </main>
+
+  <footer>
+    <p>©2026 BMI Calculator</p>
+  </footer>
+
+  <!-- JavaScript 파일 연결 -->
+  <script src="script.js"></script>
+</body>
+</html>

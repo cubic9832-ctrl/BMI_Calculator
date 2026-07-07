@@ -1,0 +1,289 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: "Noto Sans KR", Arial, sans-serif;
+  color: #333;
+  background-color: #f5f7fa;
+  line-height: 1.6;
+}
+
+/* 상단 제목 영역 */
+header {
+  background-color: #0b74c9;
+  color: white;
+  text-align: center;
+  padding: 40px 20px;
+}
+
+header h1 {
+  margin: 0  10px;
+  font-size: 32px;
+}
+
+header p {
+  margin: 0;
+  font-size: 16px;
+}
+
+/* 전체 콘텐츠 박스 */
+main {
+  width: 90%;
+  max-width: 900px;
+  margin: 40px auto;
+}
+
+section {
+  background-color: white;
+  border: 1px solid #dcdcdc;
+  border-radius: 10px;
+  padding: 30px;
+  margin-bottom: 30px;
+}
+
+/* 소제목 */
+section h2 {
+  margin-top: 0;
+  padding-left: 12px;
+  border-left: 5px solid #0b74c9;
+  color: #0b4f8a;
+  font-size: 24px;
+}
+
+
+img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+  margin: 0 auto;
+}
+
+/* BMI 계산 폼 */
+#bmi-form {
+  margin-top: 25px;
+  padding: 25px;
+  background-color: #f0f6fc;
+  border: 1px solid #c8dff2;
+  border-radius: 8px;
+}
+
+/* 입력칸 묶음 */
+.input-group {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 15px;
+  gap: 12px;
+}
+
+.input-group label {
+  width: 100px;
+  font-weight: bold;
+  color: #222;
+  text-align: right;
+}
+
+.input-group input {
+  width: 180px;
+  padding: 10px;
+  border: 1px solid #bbb;
+  border-radius: 4px;
+  font-size: 16px;
+}
+
+.input-group input:focus {
+  outline: none;
+  border-color: #0b74c9;
+  box-shadow: 0 0 0 3px rgba(11, 116, 201, 0.15);
+}
+
+/* 버튼 영역 */
+.button-group {
+  text-align: center;
+  margin-top: 20px;
+}
+
+button {
+  padding: 11px 28px;
+  border: none;
+  border-radius: 4px;
+  font-size: 15px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+#btn-cal {
+  background-color: #0b74c9;
+  color: white;
+}
+
+#btn-cal:hover {
+  background-color: #095c9f;
+}
+
+#btn-res{
+  background-color : gray;
+  color: white;
+}
+
+#btn-res:hover{
+  background-color: rgb(80, 80, 80);
+}
+
+button[type="reset"] {
+  background-color: #777;
+  color: white;
+  margin-left: 8px;
+}
+
+button[type="reset"]:hover {
+  background-color: #555;
+}
+
+.result{
+  margin-top: 25px;
+  padding: 20px;
+  border: 2px solid #0b74c9;
+  border-radius: 8px;
+  text-align: center;
+  background-color: #ffffff;
+}
+
+.result h3 {
+  margin-top: 0;
+  color: #0b4f8a;
+}
+
+#bmi-result {
+  font-size: 22px;
+  font-weight: bold;
+  color: #0b74c9;
+}
+
+#bmi-message {
+  font-size: 17px;
+  font-weight: bold;
+}
+
+/* BMI 기준표 */
+.bmi-list {
+  list-style: none;
+  padding: 0;
+  margin: 20px 0 0;
+}
+
+.bmi-list li {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 14px 18px;
+  margin-bottom: 8px;
+  border-radius: 6px;
+  font-weight: bold;
+}
+
+.bmi-list .label {
+  color: #222;
+}
+
+.bmi-list .range {
+  color: #555;
+}
+
+/* 구간별 색상 */
+.underweight {
+  background-color: #dbeafe;
+  border-left: 6px solid #3b82f6;
+}
+
+.normal {
+  background-color: #dcfce7;
+  border-left: 6px solid #22c55e;
+}
+
+.overweight {
+  background-color: #fef9c3;
+  border-left: 6px solid #eab308;
+}
+
+.obese {
+  background-color: #fee2e2;
+  border-left: 6px solid #ef4444;
+}
+
+/* 식생활 안내 카드 */
+.guide-list {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 16px;
+  margin-top: 20px;
+}
+
+.guide-card {
+  padding: 18px;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  background-color: #fafafa;
+}
+
+.guide-card h3 {
+  margin-top: 0;
+  color: #0b4f8a;
+}
+
+/* 하단 */
+footer {
+  text-align: center;
+  padding: 25px;
+  background-color: #333;
+  color: white;
+  font-size: 14px;
+}
+
+/* 반응형 */
+@media (max-width: 600px) {
+  header h1 {
+    font-size: 26px;
+  }
+
+  section {
+    padding: 22px;
+  }
+
+  .input-group {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .input-group label {
+    width: 100%;
+    text-align: left;
+  }
+
+  .input-group input {
+    width: 100%;
+  }
+
+  .guide-list {
+    grid-template-columns: 1fr;
+  }
+
+  button {
+    width: 100%;
+    margin-bottom: 8px;
+  }
+
+  button[type="reset"] {
+    margin-left: 0;
+  }
+
+  .bmi-list li {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 4px;
+  }
+}
