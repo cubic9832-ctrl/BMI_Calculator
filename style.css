@@ -54,7 +54,7 @@ section h2 {
   font-size: 24px;
 }
 
-
+/*이미지 반응형 크기 조절*/
 img {
   display: block;
   max-width: 100%;
@@ -95,13 +95,13 @@ img {
   font-size: 16px;
 }
 
+/*입력칸 클릭 시 효과*/
 .input-group input:focus {
   outline: none;
   border-color: #0b74c9;
   box-shadow: 0 0 0 3px rgba(11, 116, 201, 0.15);
 }
 
-/* 버튼 영역 */
 .button-group {
   text-align: center;
   margin-top: 20px;
@@ -168,6 +168,7 @@ footer {
   font-size: 14px;
 }
 
+/*JS에서 컨트롤하는 class별 색상 분류*/
 .underweight{
   color: rgb(77, 97, 81);
 }

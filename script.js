@@ -11,6 +11,7 @@ calcButton.addEventListener("click", function () {
   const height = Number(heightInput.value);
   const weight = Number(weightInput.value);
 
+
   // 빈 값 예외 처리
   if (!height || !weight) {
     bmiResult.textContent = "키와 몸무게를 모두 입력해 주세요.";
@@ -74,11 +75,8 @@ calcButton.addEventListener("click", function () {
 
 //class 부여 및 글자 강조 출력
   bmiMessage.innerHTML =  `현재 상태는 <strong class="${StatusClass}">${status}</strong>입니다.`;
-
-  // localStorage에 결과 저장
-  localStorage.setItem("lastBmiResult", resultText);
-  localStorage.setItem("lastBmiMessage", messageText);
 });
+
 
 // 초기화 버튼
 removeButton.addEventListener("click", function () {
@@ -87,7 +85,4 @@ removeButton.addEventListener("click", function () {
 
   bmiResult.textContent = "아직 계산하지 않았습니다.";
   bmiMessage.textContent = "";
-
-  localStorage.removeItem("lastBmiResult");
-  localStorage.removeItem("lastBmiMessage");
 });
