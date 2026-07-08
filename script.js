@@ -6,7 +6,7 @@ const removeButton = document.querySelector("#btn-res");
 const bmiResult = document.querySelector("#bmi-result");
 const bmiMessage = document.querySelector("#bmi-message");
 
-// BMI 계산 버튼
+
 calcButton.addEventListener("click", function () {
   const height = Number(heightInput.value);
   const weight = Number(weightInput.value);
@@ -18,8 +18,8 @@ calcButton.addEventListener("click", function () {
     return;
   }
 
-  // 0 이하 값 예외 처리
-  if (height <= 0 || weight <= 0) {
+  // 키, 체중 모두 0보다 작을 경우 예외 처리
+  if (height <= 0 || weight <= 0) { 
     bmiResult.textContent = "키와 몸무게는 0보다 큰 숫자여야 합니다.";
     bmiMessage.textContent = "";
     return;
@@ -51,14 +51,31 @@ calcButton.addEventListener("click", function () {
     status = "3단계 비만";
   }
 
-  const resultText = `당신의 BMI는 ${bmiFixed}입니다.`;
-  const messageText = `현재 상태는 ${status}입니다.`;
-
   // 화면에 결과 출력
+  const resultText = `당신의 BMI는 ${bmiFixed}입니다.`;
   bmiResult.textContent = resultText;
-  bmiMessage.textContent = messageText;
 
-  // localStorage에 마지막 결과 저장
+  //단계별 class 부여
+  let StatusClass = "";
+
+  if (status == "저체중"){
+    StatusClass = "underweight";
+  }else if(status == "정상"){
+    StatusClass = "normal";
+  }else if(status == "비만 전 단계"){
+    StatusClass = "overweight";
+  }else if(status == "1단계 비만"){
+    StatusClass = "lv1Obesity";
+  }else if(status == "2단계 비만"){
+    StatusClass = "lv2Obesity";
+  }else{
+    StatusClass = "lv3Obesity";
+  }
+
+//class 부여 및 글자 강조 출력
+  bmiMessage.innerHTML =  `현재 상태는 <strong class="${StatusClass}">${status}</strong>입니다.`;
+
+  // localStorage에 결과 저장
   localStorage.setItem("lastBmiResult", resultText);
   localStorage.setItem("lastBmiMessage", messageText);
 });

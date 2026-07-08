@@ -134,16 +134,6 @@ button {
   background-color: rgb(80, 80, 80);
 }
 
-button[type="reset"] {
-  background-color: #777;
-  color: white;
-  margin-left: 8px;
-}
-
-button[type="reset"]:hover {
-  background-color: #555;
-}
-
 .result{
   margin-top: 25px;
   padding: 20px;
@@ -169,72 +159,6 @@ button[type="reset"]:hover {
   font-weight: bold;
 }
 
-/* BMI 기준표 */
-.bmi-list {
-  list-style: none;
-  padding: 0;
-  margin: 20px 0 0;
-}
-
-.bmi-list li {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 14px 18px;
-  margin-bottom: 8px;
-  border-radius: 6px;
-  font-weight: bold;
-}
-
-.bmi-list .label {
-  color: #222;
-}
-
-.bmi-list .range {
-  color: #555;
-}
-
-/* 구간별 색상 */
-.underweight {
-  background-color: #dbeafe;
-  border-left: 6px solid #3b82f6;
-}
-
-.normal {
-  background-color: #dcfce7;
-  border-left: 6px solid #22c55e;
-}
-
-.overweight {
-  background-color: #fef9c3;
-  border-left: 6px solid #eab308;
-}
-
-.obese {
-  background-color: #fee2e2;
-  border-left: 6px solid #ef4444;
-}
-
-/* 식생활 안내 카드 */
-.guide-list {
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  gap: 16px;
-  margin-top: 20px;
-}
-
-.guide-card {
-  padding: 18px;
-  border: 1px solid #ddd;
-  border-radius: 8px;
-  background-color: #fafafa;
-}
-
-.guide-card h3 {
-  margin-top: 0;
-  color: #0b4f8a;
-}
-
 /* 하단 */
 footer {
   text-align: center;
@@ -242,6 +166,30 @@ footer {
   background-color: #333;
   color: white;
   font-size: 14px;
+}
+
+.underweight{
+  color: rgb(77, 97, 81);
+}
+
+.normal{
+  color: green;
+}
+
+.overweight{
+  color: rgb(236, 187, 96);
+}
+
+.lv1Obesity{
+  color: orange;
+}
+
+.lv2Obesity{
+  color: rgb(255, 98, 50);
+}
+
+.lv3Obesity{
+  color: red;
 }
 
 /* 반응형 */
